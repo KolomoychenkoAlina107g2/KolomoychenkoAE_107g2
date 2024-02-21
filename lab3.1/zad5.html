@@ -1,0 +1,32 @@
+<!DOSTYPE html>
+<html lang="ru">
+<script>
+function isPrime(num) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return num > 1;
+}
+
+function alertPrimesUpToN() {
+    let n = prompt("Введите значение n для поиска простых чисел от 2 до n:");
+    if (isNaN(n) || n === null) {
+        alert("Введите корректное число.");
+        return;
+    }
+    
+    let primes = [];
+    for (let i = 2; i <= n; i++) {
+        if (isPrime(i)) {
+            primes.push(i);
+        }
+    }
+    
+    alert('Простые числа от 2 до ' + n + ':\n' + primes.join(', '));
+}
+
+alertPrimesUpToN();
+</script>
+</html>

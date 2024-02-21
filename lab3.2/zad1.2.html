@@ -1,0 +1,13 @@
+<!DOSTYPE html>
+<html lang="ru">
+<script>
+let number = prompt("Введите строку:");
+let uniqueNumber = parseInt([...new Set(number.toString().split(''))].join(''));
+
+alert(number + "\nЧисло без повторяющихся цифр: " + uniqueNumber);
+
+</script>
+</html>
+
+<!-- [...new Set()]: Преобразует массив символов в новый сет, который автоматически удаляет дубликаты. -->
+<!-- join(''): Преобразует уникальные символы из сета обратно в строку. -->

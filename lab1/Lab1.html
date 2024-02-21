@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Lab1</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="иконка.png"type="image/x-icon">
+    
+    <style>
+        .footer {
+            border-top: 1px solid black;
+        }
+
+        .date {
+            color: gray;
+            font-size: 15px;
+        }
+
+        .custom-class {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .custom-h1 {
+            font-size: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="custom-class custom-h1">Список дел</h1>
+    <form>
+        <input type="text" placeholder="Новый элемент списка" class="custom-class">
+        <button type="submit" class="custom-class">Создать</button>
+        <button type="reset" class="custom-class">Очистить всё</button>
+    </form>
+    <ol>
+        <li><input type="checkbox" class="custom-class"/> Почесать кошку <sub class="date">от 07.02.2024 </sub><button class="custom-class">✖</button></li>
+        <li><input type="checkbox" class="custom-class"/> Покушать <sub class="date">от 06.02.2024 </sub><button class="custom-class">✖</button></li>
+        <li><input type="checkbox" class="custom-class"/> Поспать <sub class="date">от 05.02.2024 </sub><button class="custom-class">✖</button></li>
+    </ol>
+
+    <div class="footer">
+        <p> Copyright &copy;</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOSTYPE html>
+<html lang="ru">
+<script>
+let inputString = prompt("Введите строку:"); // Запрашиваем у пользователя ввод строки
+
+if (!inputString) {
+    alert("Пожалуйста, введите строку.");
+} else {
+    let firstUniqueChar = findFirstUniqueChar(inputString); // Находим первый неповторяющийся символ
+
+    // Выводим результат через alert
+    alert(`Введенная строка: ${inputString}\nПервый неповторяющийся символ: ${firstUniqueChar}`);
+}
+
+function findFirstUniqueChar(str) {
+    let charCount = {};
+
+    for (let char of str) {
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+
+    for (let char of str) {
+        if (charCount[char] === 1) {
+            return char;
+        }
+    }
+
+    return null;
+}
+</script>
+</html>

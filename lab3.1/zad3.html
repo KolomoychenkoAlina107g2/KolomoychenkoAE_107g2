@@ -1,0 +1,20 @@
+<!DOSTYPE html>
+<html lang="ru">
+<script>
+let message = '';
+
+for (let i = 2; i <= 10; i++) {
+    if (i % 2 === 0) {
+        message += i + ', ';
+    }
+}
+
+alert(message.slice(0, -2)); // Удаляем последнюю запятую и пробел перед выводом
+</script>
+</html>
+
+<!-- for (let i = 2; i <= 10; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+} -->

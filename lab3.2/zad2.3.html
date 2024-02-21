@@ -1,0 +1,27 @@
+<!DOSTYPE html>
+<html lang="ru">
+<script>
+let inputString = prompt("Введите строку:"); // Запрашиваем у пользователя ввод строки
+
+if (!inputString) {
+    alert("Пожалуйста, введите строку.");
+} else {
+    let uniqueString = findUniqueCharacters(inputString); // Находим уникальные символы в строке
+
+    // Выводим результат через alert
+    alert(`Исходная строка: ${inputString}\nСтрока с уникальными символами: ${uniqueString}`);
+}
+
+function findUniqueCharacters(str) {
+    let uniqueChars = '';
+    
+    for (let char of str) {
+        if (str.indexOf(char) === str.lastIndexOf(char)) {
+            uniqueChars += char;
+        }
+    }
+    
+    return uniqueChars;
+}
+</script>
+</html>

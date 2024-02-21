@@ -1,0 +1,26 @@
+<!DOSTYPE html>
+<html lang="ru">
+<script>
+let length = prompt("Введите длину строки:"); // Запрашиваем у пользователя ввод длины строки
+
+if (isNaN(length) || length <= 0) {
+    alert("Пожалуйста, введите положительное число для длины строки.");
+} else {
+    let randomString = generateRandomString(length); // Генерируем случайную строку заданной длины
+
+    // Выводим результат через alert
+    alert(`Длина строки: ${length}\nСгенерированная строка: ${randomString}`);
+}
+
+function generateRandomString(length) {
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+
+    return result;
+}
+</script>
+</html>

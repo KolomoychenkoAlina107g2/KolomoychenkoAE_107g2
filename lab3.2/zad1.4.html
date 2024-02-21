@@ -1,0 +1,35 @@
+<!DOSTYPE html>
+<html lang="ru">
+<script>
+let number = prompt("Введите число:"); // Просим пользователя ввести число
+number = parseInt(number); // Преобразуем введенную строку в число
+
+if (isNaN(number)) {
+    alert("Некорректный ввод. Пожалуйста, введите число.");
+} else {
+    let binaryString = number.toString(2); // Переводим число в двоичную строку
+    let longestSequence = findLongestSequence(binaryString); // Находим самую длинную последовательность
+
+    // Выводим сообщение через alert
+    alert(`Заданное число: ${number}\nДвоичное представление: ${binaryString}\nСамая длинная последовательность: ${longestSequence}`);
+}
+
+function findLongestSequence(binaryString) {
+    let maxSequence = 0;
+    let currentSequence = 0;
+
+    for (let digit of binaryString) {
+        if (digit === '0' || digit === '1') {
+            currentSequence++;
+            if (currentSequence > maxSequence) {
+                maxSequence = currentSequence;
+            }
+        } else {
+            currentSequence = 0;
+        }
+    }
+
+    return maxSequence;
+}
+</script>
+</html>
