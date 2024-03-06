@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<script>
+function findMaxDifference(arr) {
+    if (arr.length < 2) {
+        return -1; // Возвращаем -1, если массив содержит менее 2 элементов
+    }
+
+    let maxDiff = arr[1] - arr[0]; // Инициализация переменной maxDiff как разницы между вторым и первым элементами массива
+    let minElement = arr[0]; // Инициализация переменной minElement как первого элемента массива
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] - minElement > maxDiff) { // Проверка разницы между текущим элементом и minElement
+            maxDiff = arr[i] - minElement; // Обновление maxDiff, если текущая разница больше предыдущей
+        }
+        if (arr[i] < minElement) {
+            minElement = arr[i]; // Обновление minElement, если текущий элемент меньше minElement
+        }
+    }
+
+    return maxDiff; // Возвращаем максимальную разницу
+}
+
+let input = prompt("Введите элементы массива через запятую (например, 7, 2, 3, 10, 2, 4, 8, 1):");
+let array = input.split(",").map(item => parseInt(item.trim(), 10)); // Разбиваем введенную строку на массив чисел
+
+let maxDifference = findMaxDifference(array); // Находим максимальную разницу в массиве
+
+alert("Максимальная разница: " + maxDifference);
+
+</script>
+</html>

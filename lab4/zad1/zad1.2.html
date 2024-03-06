@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<script>
+function removeDuplicates(arr) {
+    return Array.from(new Set(arr)); // Создаем новый Set (коллекцию уникальных значений) из массива и преобразуем обратно в массив без повторений
+}
+
+
+let input = prompt("Введите элементы массива через запятую (например, 1, 3, 5, 3, 2, 8, 7):");
+let array = input.split(",").map(item => item.trim()); // Разбиваем введенную строку на массив элементов
+
+let uniqueArray = removeDuplicates(array); // Удаляем повторяющиеся элементы из массива
+
+alert("Массив без повторяющихся элементов: " + uniqueArray); 
+
+</script>
+</html>

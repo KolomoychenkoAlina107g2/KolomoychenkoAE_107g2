@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<script>
+function findTripletsWithZeroSum(arr) {
+    let tripletsCount = 0; // Инициализация счетчика троек
+    let numMap = {}; // Объект для отслеживания встреченных чисел
+
+    // Перебор каждого числа в массиве
+    arr.forEach((num, index) => {
+        // Вложенный цикл для проверки возможных троек чисел
+        for (let i = index + 1; i < arr.length; i++) {
+            let thirdNum = -(num + arr[i]); // Находим третье число, чтобы сумма была равна 0
+            if (numMap[thirdNum]) {
+                tripletsCount++; // Увеличиваем счетчик троек
+            }
+        }
+
+        numMap[num] = 1; // Добавляем число в numMap
+    });
+
+    return tripletsCount; // Возвращаем общее количество троек чисел, дающих в сумме 0
+}
+
+const inputArr = prompt('Введите числа через запятую:').split(',').map(Number);
+
+const tripletsCount = findTripletsWithZeroSum(inputArr);
+
+alert(`Количество троек чисел, дающих в сумме 0: ${tripletsCount}`);
+</script>
+</html>

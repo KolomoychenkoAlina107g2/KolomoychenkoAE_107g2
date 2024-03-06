@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<script>
+const objects = [
+    { id: 1, isDone: true },
+    { id: 2, isDone: false },
+    { id: 3, isDone: true }
+];
+
+//Формируем строку для полного массива
+const fullArrayString = objects.map(obj => JSON.stringify(obj)).join('\n');
+alert('Полный массив:\n' + fullArrayString);
+
+// Фильтруем массив и формируем строку для отфильтрованного массива
+const filteredObjects = objects.filter(obj => obj.isDone);
+const filteredArrayString = filteredObjects.map(obj => JSON.stringify(obj)).join('\n');
+alert('Отфильтрованный массив:\n' + filteredArrayString);
+
+</script>
+</html>

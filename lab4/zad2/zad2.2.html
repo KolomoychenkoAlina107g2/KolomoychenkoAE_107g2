@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<script>
+
+function flattenArray(arr) {
+    return arr.flat(Infinity);
+}
+
+const multiDimArray = [1, 4, [34, 1, 20], [6, [6, 12, 8], 6]];
+const flatArray = flattenArray(multiDimArray);
+
+
+
+alert(JSON.stringify(multiDimArray));
+alert(JSON.stringify(flatArray));
+
+</script>
+</html>

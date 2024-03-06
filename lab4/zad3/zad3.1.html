@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<script>
+
+function findPairsWithZeroSum(arr) {
+    let pairsCount = 0; // Инициализация счетчика пар
+    let numMap = {}; // Объект для отслеживания встреченных чисел
+
+    // Перебор каждого числа в массиве
+    arr.forEach(num => {
+        // Если в объекте numMap есть обратное отрицательное число (-num), то увеличиваем счетчик пар
+        if (numMap[-num]) {
+            pairsCount++;
+            numMap[-num] -= 1; // Уменьшаем количество доступных обратных чисел
+        } else {
+            numMap[num] = (numMap[num] || 0) + 1; // Добавляем число в numMap
+        }
+    });
+
+    return pairsCount; // Возвращаем общее количество пар чисел, дающих в сумме 0
+}
+
+
+const inputArr = prompt('Введите числа через запятую:').split(',').map(Number);
+
+
+const pairsCount = findPairsWithZeroSum(inputArr);
+
+alert(`Количество пар чисел, дающих в сумме 0: ${pairsCount}`);
+</script>
+</html>

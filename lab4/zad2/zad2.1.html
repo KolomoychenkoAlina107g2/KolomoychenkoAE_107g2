@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<script>
+function Elements(arr, num) {
+    return arr.filter(item => item > num);
+}
+
+const inputArray = prompt('Введите элементы массива через запятую:').split(',').map(Number);
+const inputNumber = parseInt(prompt('Введите число:'));
+
+const result = Elements(inputArray, inputNumber);
+alert(`Элементы массива, которые больше ${inputNumber}: ${result}`);
+</script>
+</html>
