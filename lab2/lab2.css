@@ -16,28 +16,25 @@ body {
     padding: 20px 0;
 }
 
-.custom-h1 {
-    font-size: 40px;
-    font-family: 'Pacifico', cursive; 
-    background-color: transparent; 
-}
+
 .close-button {
-    background-color: transparent; /* Делаем фон кнопки крестика прозрачным */
-    color: #ffffff; /* Цвет символа крестика */
-    border: none; /* Убираем границу кнопки */
-    cursor: pointer; /* Делаем курсор указателем при наведении на кнопку */
-    font-size: 16px; /* Размер символа крестика */
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold; /* Add this line to make the close button bold */
 }
 .input-group {
     display: flex;
     align-items: left;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    
 }
 
 input[type="text"],
-.submit-button {
-    min-width: 700px;
-
+.submit-button, .reset-button {
+    min-width: 600px;
     background-color: #bdc3c7; 
     color: #333; 
     border: none;
@@ -92,29 +89,50 @@ ol {
     padding: 0;
 }
 
-li:nth-child(odd) {
-    background-color: #454545; /* Темно-серый фон для нечетных элементов */
+
+li:nth-child(6n+1) {
+    background-color: #666; /* Different shade of gray for each element */
 }
 
-li:nth-child(even) {
-    background-color: #333; /* Темный фон для четных элементов */
+li:nth-child(6n+2) {
+    background-color: #777; /* Different shade of gray for each element */
 }
 
+li:nth-child(6n+3) {
+    background-color: #888; /* Different shade of gray for each element */
+}
+
+li:nth-child(6n+4) {
+    background-color: #999; /* Different shade of gray for each element */
+}
+
+li:nth-child(6n+5) {
+    background-color: #AAA; /* Different shade of gray for each element */
+}
+
+li:nth-child(6n) {
+    background-color: #BBB; /* Different shade of gray for each element */
+}
+
+/* Добавляем стили для подсветки при наведении на элемент списка */
+li:hover {
+    background-color: #555; /* Выберите цвет подсветки по вашему вкусу */
+}
 li {
-    min-width: 800px;
+    min-width: 700px;
     display: flex;
-    align-items: left;
+    align-items: left; /* Change align-items to align-items: flex-start; */
     justify-content: space-between;
     padding: 10px 0;
-    white-space: nowrap; /* Отображение текста в одну строку и обрезка многоточием при необходимости */
-    overflow: hidden; /* Скрытие переполнения текста */
-    position: relative; /* Для позиционирования дат */
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
 }
 
 .date {
     font-size: 12px; /* Уменьшение размера шрифта для дат */
     color: lightgray; /* Цвет текста светло-серый */
-    margin-top: 5px; /* Отступ сверху для размещения под текстом */
+    margin-top: 2px; /* Отступ сверху для размещения под текстом */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -130,6 +148,29 @@ li {
     background-color: #333;
     color: white;
     text-align: center;
+}
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #33524c;
+    padding: 20px 0;
+    font-family: 'Pacifico', cursive; 
+    
+}
+
+.header-image {
+    width: 80px; /* Укажите нужную ширину для изображения */
+    height: 80px; /* Укажите нужную высоту для изображения */
+    margin-right: 10px;
+}
+
+.header-text {
+    font-size: 40px;
+    color: white;
 }
 
 

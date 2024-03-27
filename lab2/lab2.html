@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    
+
     <title>Lab2</title>
     <meta charset="UTF-8">
     <link rel="icon" href="https://www.flaticon.com/ru/free-icons/-" type="image/x-icon">
     <link rel="stylesheet" href="lab2.css">
+    <style>
+        .strikethrough {
+            text-decoration: line-through;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const closeButtons = document.querySelectorAll('.close-button');
 
+            closeButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    const listItem = this.closest('li');
+                    listItem.classList.toggle('strikethrough');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1 class="custom-class custom-h1">Список дел</h1>
+        <!-- Добавление составного заголовка -->
+        <div class="header">
+            <img src="spisok.png" alt="Изображение" class="header-image">
+            <h1 class="header-text">Список дел</h1>
+        </div>
         <form>
             <div class="input-group">
                 <input type="text" placeholder="Новый элемент списка" class="custom-class">
@@ -20,8 +40,11 @@
         </form>
         <ol>
             <li><input type="checkbox" class="custom-checkbox"/> Почесать кошку <sub class="date">от 07.02.2024 </sub><button class="custom-class close-button">✖</button></li>
-            <li><input type="checkbox" class="custom-checkbox"/> Почесать кошку <sub class="date">от 07.02.2024 </sub><button class="custom-class close-button">✖</button></li>
-            <li><input type="checkbox" class="custom-checkbox"/> Почесать кошку <sub class="date">от 07.02.2024 </sub><button class="custom-class close-button">✖</button></li>
+            <li><input type="checkbox" class="custom-checkbox"/> Почесать кота <sub class="date">от 07.02.2024 </sub><button class="custom-class close-button">✖</button></li>
+            <li><input type="checkbox" class="custom-checkbox"/> Почесать собачку <sub class="date">от 07.02.2024 </sub><button class="custom-class close-button">✖</button></li>
+            <li><input type="checkbox" class="custom-checkbox"/> Покушать <sub class="date">от 07.02.2024 </sub><button class="custom-class close-button">✖</button></li>
+            <li><input type="checkbox" class="custom-checkbox"/> Попить <sub class="date">от 07.02.2024 </sub><button class="custom-class close-button">✖</button></li>
+            <li><input type="checkbox" class="custom-checkbox"/> Поспать <sub class="date">от 07.02.2024 </sub><button class="custom-class close-button">✖</button></li>
         </ol>
     </div>
 
