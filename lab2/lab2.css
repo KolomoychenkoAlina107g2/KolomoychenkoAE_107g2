@@ -23,7 +23,7 @@ body {
     border: none;
     cursor: pointer;
     font-size: 25px;
-    font-weight: bold; /* Add this line to make the close button bold */
+    font-weight: bold; 
 }
 .input-group {
     display: flex;
@@ -91,37 +91,38 @@ ol {
 
 
 li:nth-child(6n+1) {
-    background-color: #666; /* Different shade of gray for each element */
+    background-color: #666; 
+    
 }
 
 li:nth-child(6n+2) {
-    background-color: #777; /* Different shade of gray for each element */
+    background-color: #777; 
 }
 
 li:nth-child(6n+3) {
-    background-color: #888; /* Different shade of gray for each element */
+    background-color: #888; 
 }
 
 li:nth-child(6n+4) {
-    background-color: #999; /* Different shade of gray for each element */
+    background-color: #999;
 }
 
 li:nth-child(6n+5) {
-    background-color: #AAA; /* Different shade of gray for each element */
+    background-color: #AAA; 
 }
 
 li:nth-child(6n) {
-    background-color: #BBB; /* Different shade of gray for each element */
+    background-color: #BBB; 
 }
 
-/* Добавляем стили для подсветки при наведении на элемент списка */
+
 li:hover {
-    background-color: #555; /* Выберите цвет подсветки по вашему вкусу */
+    background-color: #555; 
 }
 li {
     min-width: 700px;
     display: flex;
-    align-items: left; /* Change align-items to align-items: flex-start; */
+    align-items: left;
     justify-content: space-between;
     padding: 10px 0;
     white-space: nowrap;
@@ -163,8 +164,8 @@ li {
 }
 
 .header-image {
-    width: 80px; /* Укажите нужную ширину для изображения */
-    height: 80px; /* Укажите нужную высоту для изображения */
+    width: 80px; 
+    height: 80px; 
     margin-right: 10px;
 }
 
