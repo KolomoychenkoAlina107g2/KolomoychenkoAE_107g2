@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Counter</title>
+<style>
+    .container {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 50px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <button id="decrement">-</button>
+        <span id="count">0</span>
+        <button id="increment">+</button>
+    </div>
+
+    <script>
+        const countElement = document.getElementById('count');
+        const decrementButton = document.getElementById('decrement');
+        const incrementButton = document.getElementById('increment');
+        
+        let count = 0;
+
+        function updateCount() {
+            countElement.textContent = count;
+        }
+
+        decrementButton.addEventListener('click', () => {
+            count--;
+            updateCount();
+        });
+
+        incrementButton.addEventListener('click', () => {
+            count++;
+            updateCount();
+        });
+
+        updateCount(); // Инициализация значения счетчика
+    </script>
+</body>
+</html>
